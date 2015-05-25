@@ -136,6 +136,10 @@
     //place scrollview at bottom of hierarchy
     [self insertSubview:_scrollView atIndex:0];
     
+    self.pageControl = [[UIPageControl alloc] init];
+    self.pageControl.currentPage = 0;
+    [self addSubview:self.pageControl];
+    
     if (_dataSource)
     {
         [self reloadData];
